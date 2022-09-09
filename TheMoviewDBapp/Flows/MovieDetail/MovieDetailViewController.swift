@@ -34,6 +34,16 @@ class MovieDetailViewController: UIViewController {
 
     }
     
+// MARK: SETUP FUNC -
+    func setupAlertError(alrtTitle: String, message: String) {
+        let alert = UIAlertController(title: alrtTitle, message: message, preferredStyle: .alert)
+        let tryAgain = UIAlertAction(title: "Try again", style: .default) { action in
+            self.presenter?.requestMovieDetail(url: Endpoints.BaseURL + Endpoints.MoviesPath + "\(self.movieID)" + Constats.oldPathAPI + Constats.apiKey)
+        }
+        alert.addAction(tryAgain)
+        self.present(alert, animated: true)
+    }
+    
 // MARK: GENERAL FUNC -
     func fillData(data: MovieDetailResponse) {
         imgMovie.DownloadImgFromURL(uri: Endpoints.ImagePath + (data.poster_path ?? ""))
@@ -62,6 +72,6 @@ extension MovieDetailViewController: MovieDetailViewProtocol {
     }
     
     func failGetMovieDetail() {
-        print("Error get movies detail")
+        setupAlertError(alrtTitle: "We´re sorry", message: "Somethings, wrong, please try again")
     }
 }

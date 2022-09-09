@@ -68,7 +68,7 @@ class HomeViewController: UIViewController {
         }
         
         let logout = UIAlertAction(title: "Log out", style: .destructive) { action in
-            print("DEBUG: LOGUT")
+            self.navigationController?.popViewController(animated: true)
         }
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { action in
@@ -80,6 +80,15 @@ class HomeViewController: UIViewController {
         actionSheet.addAction(cancel)
         
         self.present(actionSheet, animated: true)
+    }
+    
+    func setupAlertError(alrtTitle: String, message: String) {
+        let alert = UIAlertController(title: alrtTitle, message: message, preferredStyle: .alert)
+        let tryAgain = UIAlertAction(title: "Try again", style: .default) { action in
+            self.presenter?.requestMovies(url: Endpoints.BaseURL + Endpoints.MoviesPath + Categories.popular.rawValue + Constats.oldPathAPI + Constats.apiKey + "&language=\(self.language)&page=\(self.page)")
+        }
+        alert.addAction(tryAgain)
+        self.present(alert, animated: true)
     }
     
 // MARK: @OBJC FUNC -
@@ -160,6 +169,6 @@ extension HomeViewController: HomeViewProtocol {
     }
     
     func failGetMovies() {
-        print("Fail get moview")
+        setupAlertError(alrtTitle: "We´re sorry", message: "Somethings, wrong, please try again")
     }
 }

@@ -12,8 +12,12 @@ class LoginInteractor: LoginInteractorProtocol {
     
     func Login(object: objecLogin) {
         NetworkManager().postLogin(url: Endpoints.BaseURL + Endpoints.AuthToken + "validate_with_login?api_key=" + Constats.apiKey, loginObject: object) { data in
-            guard let safeData = data else { return }
-            self.presenter?.passData(data: safeData)
+            if let safeData = data {
+                self.presenter?.passData(data: safeData)
+            }else{
+                self.presenter?.passData(data: data)
+            }
+            
         }
     }
     

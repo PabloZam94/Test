@@ -33,6 +33,15 @@ class ProfileViewController: UIViewController {
     }
     
 // MARK: SETUP FUNC -
+    func setupAlertError(alrtTitle: String, message: String) {
+        let alert = UIAlertController(title: alrtTitle, message: message, preferredStyle: .alert)
+        let tryAgain = UIAlertAction(title: "Try again", style: .default) { action in
+            self.presenter?.requestAccountDetail(url: Endpoints.BaseURL + Endpoints.Account + Constats.oldPathAPI + Constats.apiKey + "&session_id=\(self.sessionID)")
+        }
+        alert.addAction(tryAgain)
+        self.present(alert, animated: true)
+    }
+    
     func setupUI() {
         imgUser.layoutIfNeeded()
         imgUser.layer.cornerRadius = imgUser.frame.height / 2
@@ -105,7 +114,7 @@ extension ProfileViewController: ProfileViewProtocol {
     }
     
     func failGetFavoritesMovies() {
-        print("DEBUG: ERROR TO GET FAVORITES MOVIES")
+        setupAlertError(alrtTitle: "We´re sorry", message: "Somethings, wrong, please try again")
     }
     
 }
