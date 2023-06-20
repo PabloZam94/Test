@@ -85,16 +85,6 @@ class ProductInfoViewController: UIViewController {
 
 // MARK: EXTENSION -
 extension ProductInfoViewController: ProductInfoViewProtocol {
-//    func successGetMovieDetail(data: MovieDetailResponse) {
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//            self.loader.dismiss(animated: false)
-//        }
-//    }
-//    
-//    func failGetMovieDetail() {
-//        setupAlertError(alrtTitle: "We´re sorry", message: "Somethings, wrong, please try again")
-//    }
-//
     func successGetProductInfo(data: [ProductInfoModel]) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.fillData(data: data)
