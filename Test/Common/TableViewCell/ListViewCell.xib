@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="166" id="KGk-i7-Jjw" customClass="ListViewCell" customModule="Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="166"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="421" height="166"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UCj-BA-9D9">
+                        <rect key="frame" x="10" y="19.666666666666664" width="128" height="86.333333333333343"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nXn-rc-Eqs">
+                        <rect key="frame" x="154" y="15.999999999999993" width="251" height="102.33333333333331"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yze-3v-s9S">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6s8-Db-eGY">
+                                <rect key="frame" x="0.0" y="9.9999999999999982" width="50" height="28.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="1ku-lW-3WJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPt-ge-YPe">
+                                <rect key="frame" x="0.0" y="48.333333333333329" width="187" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compralo con mercado pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPV-Bu-hJd">
+                                        <rect key="frame" x="0.0" y="0.0" width="147" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="iJm-SZ-xjf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <color key="textColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mercardo_pago" translatesAutoresizingMaskIntoConstraints="NO" id="nmZ-h2-L3U">
+                                        <rect key="frame" x="0.0" y="15" width="50" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="CfG-4a-ROB"/>
+                                            <constraint firstAttribute="width" constant="50" id="ekD-eE-8XL"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nmZ-h2-L3U" firstAttribute="leading" secondItem="lPt-ge-YPe" secondAttribute="leading" id="JGa-pQ-SUW"/>
+                                    <constraint firstItem="oPV-Bu-hJd" firstAttribute="top" secondItem="lPt-ge-YPe" secondAttribute="top" id="JtG-lL-18R"/>
+                                    <constraint firstItem="nmZ-h2-L3U" firstAttribute="top" secondItem="oPV-Bu-hJd" secondAttribute="bottom" constant="5" id="Mwk-Dx-YJF"/>
+                                    <constraint firstAttribute="height" constant="30" id="pEQ-Ld-x48"/>
+                                    <constraint firstItem="oPV-Bu-hJd" firstAttribute="leading" secondItem="lPt-ge-YPe" secondAttribute="leading" id="q0q-cU-sM7"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBT-T7-bAC">
+                                <rect key="frame" x="0.0" y="90.333333333333329" width="50" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="LkB-pn-t6f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                <color key="textColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="fBT-T7-bAC" firstAttribute="top" secondItem="lPt-ge-YPe" secondAttribute="bottom" constant="12" id="vTE-mG-4n4"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="UCj-BA-9D9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19.670000000000002" id="LTe-ox-2gV"/>
+                    <constraint firstAttribute="trailing" secondItem="nXn-rc-Eqs" secondAttribute="trailing" constant="16" id="S6I-mT-IG0"/>
+                    <constraint firstItem="nXn-rc-Eqs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="WbS-Dl-xxO"/>
+                    <constraint firstItem="nXn-rc-Eqs" firstAttribute="leading" secondItem="UCj-BA-9D9" secondAttribute="trailing" constant="16" id="gSv-gh-9KE"/>
+                    <constraint firstAttribute="bottom" secondItem="nXn-rc-Eqs" secondAttribute="bottom" constant="16" id="jqz-e6-hBd"/>
+                    <constraint firstItem="UCj-BA-9D9" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.304038" id="qrW-Do-GPV"/>
+                    <constraint firstItem="UCj-BA-9D9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="v8J-Tm-KVZ"/>
+                    <constraint firstItem="UCj-BA-9D9" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.643216" id="xfk-Tr-Nbf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblBottom" destination="fBT-T7-bAC" id="d4n-jg-918"/>
+                <outlet property="lblPrice" destination="6s8-Db-eGY" id="asa-ea-adU"/>
+                <outlet property="lblSubtitle" destination="oPV-Bu-hJd" id="dUg-3P-rRB"/>
+                <outlet property="lblTitle" destination="yze-3v-s9S" id="1kQ-PJ-cl4"/>
+                <outlet property="productImg" destination="UCj-BA-9D9" id="tOj-VQ-FXu"/>
+            </connections>
+            <point key="canvasLocation" x="103.05343511450381" y="43.661971830985919"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mercardo_pago" width="1920" height="501"/>
+    </resources>
+</document>
